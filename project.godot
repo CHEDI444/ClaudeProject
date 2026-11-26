@@ -1,0 +1,22 @@
+; Project configuration for Godot 4.7.2 — 2D top-down living-world sim
+
+config_version=5
+
+[application]
+config/name="LivingWorldSim"
+config/main_scene="res://scenes/world/main_world.tscn"
+
+[rendering]
+rendering/renderer/rendering_method="gl_compatibility"
+rendering/quality/drivers/compatibility/shader_mode=0
+
+[display]
+display/window/size/viewport_width=1920
+display/window/size/viewport_height=1080
+display/window/stretch/mode=2
+display/window/stretch/aspect=1
+
+[autoload]
+EventBus="res://scripts/core/EventBus.gd"
+TimeManager="res://scripts/core/TimeManager.gd"
+WorldTopology="res://scripts/core/WorldTopology.gd"
