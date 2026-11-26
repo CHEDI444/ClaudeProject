@@ -1,5 +1,4 @@
 extends Node
-class_name EventBus
 
 signal time_tick(hours: int, minutes: int, speed: float)
 signal world_event_occurred(event_name: String, position: Vector2)

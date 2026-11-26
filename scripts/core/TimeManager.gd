@@ -1,5 +1,4 @@
 extends Node
-class_name TimeManager
 
 ## Tick clock for in-game time. Speeds: 0.0 (paused), 1x, 2x, 4x.
 ## A "tick" = one in-game minute. Emits EventBus.time_tick each minute.
@@ -35,9 +34,7 @@ func _advance_minute() -> void:
 		if in_game_hour >= 24:
 			in_game_hour = 0
 			in_game_day += 1
-	var bus: EventBus = get_node("/root/EventBus") as EventBus
-	if bus != null:
-		bus.time_tick.emit(in_game_hour, in_game_minute, speed)
+	EventBus.time_tick.emit(in_game_hour, in_game_minute, speed)
 
 func set_speed(new_speed: float) -> void:
 	speed = maxf(new_speed, SPEED_PAUSED)

@@ -13,10 +13,9 @@ rendering/quality/drivers/compatibility/shader_mode=0
 [display]
 display/window/size/viewport_width=1920
 display/window/size/viewport_height=1080
-display/window/stretch/mode=2
-display/window/stretch/aspect=1
+display/window/stretch/mode="canvas_items"
+display/window/stretch/aspect="keep"
 
 [autoload]
 EventBus="res://scripts/core/EventBus.gd"
 TimeManager="res://scripts/core/TimeManager.gd"
-WorldTopology="res://scripts/core/WorldTopology.gd"
