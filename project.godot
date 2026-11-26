@@ -1,22 +1,33 @@
-; Project configuration for Godot 4.7.2 — 2D top-down living-world sim
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
 config_version=5
 
 [application]
+
 config/name="LivingWorldSim"
+config/features=PackedStringArray("4.7")
 config/main_scene="res://scenes/world/main_world.tscn"
 
-[rendering]
-rendering/renderer/rendering_method="gl_compatibility"
-rendering/quality/drivers/compatibility/shader_mode=0
+[autoload]
+
+EventBus="res://scripts/core/EventBus.gd"
+TimeManager="res://scripts/core/TimeManager.gd"
+WorldTopology="res://scripts/core/WorldTopology.gd"
 
 [display]
+
 display/window/size/viewport_width=1920
 display/window/size/viewport_height=1080
 display/window/stretch/mode=2
 display/window/stretch/aspect=1
 
-[autoload]
-EventBus="res://scripts/core/EventBus.gd"
-TimeManager="res://scripts/core/TimeManager.gd"
-WorldTopology="res://scripts/core/WorldTopology.gd"
+[rendering]
+
+rendering/renderer/rendering_method="gl_compatibility"
+rendering/quality/drivers/compatibility/shader_mode=0
